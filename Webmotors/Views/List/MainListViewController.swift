@@ -14,6 +14,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel.setupMake()
     }
 }
 

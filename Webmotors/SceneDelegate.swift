@@ -28,7 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        appearance.isTranslucent = true
 //        appearance.backgroundColor = Constants.default.bgGray
         
-        let rootViewModel = MainListViewModel()
+        let worker = Worker()
+        let rootViewModel = MainListViewModel(worker: worker)
         let rootViewController = MainListViewController(viewModel: rootViewModel)
         let navVC = UINavigationController(rootViewController: rootViewController)
         
