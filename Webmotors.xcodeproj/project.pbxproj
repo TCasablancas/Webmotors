@@ -27,6 +27,10 @@
 		EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B692869F9FF00F2FAD3 /* BaseView.swift */; };
 		EF932B6C2869FA3400F2FAD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B6B2869FA3300F2FAD3 /* BaseViewController.swift */; };
 		EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B6D2869FB7F00F2FAD3 /* MainListViewController.swift */; };
+		EF932B702869FC4F00F2FAD3 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B6F2869FC4F00F2FAD3 /* MainListView.swift */; };
+		EF932B72286A008500F2FAD3 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B71286A008500F2FAD3 /* MainListViewModel.swift */; };
+		EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B73286A012C00F2FAD3 /* Colors.swift */; };
+		EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		EF932B692869F9FF00F2FAD3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EF932B6B2869FA3300F2FAD3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF932B6D2869FB7F00F2FAD3 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
+		EF932B6F2869FC4F00F2FAD3 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		EF932B71286A008500F2FAD3 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
+		EF932B73286A012C00F2FAD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extenson.swift"; sourceTree = "<group>"; };
 		F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebmotorsTests.debug.xcconfig"; path = "Target Support Files/Pods-WebmotorsTests/Pods-WebmotorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +168,7 @@
 				EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */,
 				EF932B2C2869E96300F2FAD3 /* ViewController.swift */,
 				EF932B652869F91900F2FAD3 /* UI */,
+				EF932B75286A015F00F2FAD3 /* Extensions */,
 				EF932B582869EB0800F2FAD3 /* Models */,
 				EF932B592869EB1700F2FAD3 /* Services */,
 				EF932B5A2869EB3A00F2FAD3 /* Views */,
@@ -214,7 +223,9 @@
 		EF932B5B2869EB5000F2FAD3 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				EF932B6F2869FC4F00F2FAD3 /* MainListView.swift */,
 				EF932B6D2869FB7F00F2FAD3 /* MainListViewController.swift */,
+				EF932B71286A008500F2FAD3 /* MainListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -243,8 +254,17 @@
 			children = (
 				EF932B692869F9FF00F2FAD3 /* BaseView.swift */,
 				EF932B6B2869FA3300F2FAD3 /* BaseViewController.swift */,
+				EF932B73286A012C00F2FAD3 /* Colors.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		EF932B75286A015F00F2FAD3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,13 +507,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF932B602869EC4F00F2FAD3 /* ServerError.swift in Sources */,
+				EF932B702869FC4F00F2FAD3 /* MainListView.swift in Sources */,
 				EF932B622869EC7B00F2FAD3 /* Request.swift in Sources */,
+				EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */,
 				EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */,
 				EF932B5D2869EBFF00F2FAD3 /* Worker.swift in Sources */,
+				EF932B72286A008500F2FAD3 /* MainListViewModel.swift in Sources */,
 				EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */,
 				EF932B6C2869FA3400F2FAD3 /* BaseViewController.swift in Sources */,
 				EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */,
 				EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */,
+				EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */,
 				EF932B672869F93300F2FAD3 /* CardView.swift in Sources */,
 				EF932B642869ECDB00F2FAD3 /* Response.swift in Sources */,
 				EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */,
