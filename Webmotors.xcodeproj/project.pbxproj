@@ -179,6 +179,7 @@
 				EF932B212869E96200F2FAD3 /* Sources */,
 				EF932B222869E96200F2FAD3 /* Frameworks */,
 				EF932B232869E96200F2FAD3 /* Resources */,
+				846161C53CC046818A430256 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,7 @@
 				EF932B412869E96500F2FAD3 /* Sources */,
 				EF932B422869E96500F2FAD3 /* Frameworks */,
 				EF932B432869E96500F2FAD3 /* Resources */,
+				92F9296707F6267187B9CB5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +320,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846161C53CC046818A430256 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webmotors/Pods-Webmotors-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webmotors/Pods-Webmotors-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Webmotors/Pods-Webmotors-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92F9296707F6267187B9CB5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB48CA1E208198540E320EAC /* [CP] Check Pods Manifest.lock */ = {
