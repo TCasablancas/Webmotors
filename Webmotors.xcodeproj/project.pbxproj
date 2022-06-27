@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3162B0D17DEA0547DD4D9AB8 /* Pods_Webmotors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5B16CB004E0CA94275609B /* Pods_Webmotors.framework */; };
+		490F85128E528D394EBF8D5A /* Pods_Webmotors_WebmotorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066A0E5FD81CA1DA27C61039 /* Pods_Webmotors_WebmotorsUITests.framework */; };
+		AABFE81457D63198FA58E7C3 /* Pods_WebmotorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */; };
 		EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B282869E96300F2FAD3 /* AppDelegate.swift */; };
 		EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */; };
 		EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2C2869E96300F2FAD3 /* ViewController.swift */; };
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066A0E5FD81CA1DA27C61039 /* Pods_Webmotors_WebmotorsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Webmotors_WebmotorsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5B16CB004E0CA94275609B /* Pods_Webmotors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Webmotors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F4CAD8AAB6AF69717AA562 /* Pods-Webmotors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors.debug.xcconfig"; path = "Target Support Files/Pods-Webmotors/Pods-Webmotors.debug.xcconfig"; sourceTree = "<group>"; };
+		8983A1687B6CE4E4B5E0D9C6 /* Pods-WebmotorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebmotorsTests.release.xcconfig"; path = "Target Support Files/Pods-WebmotorsTests/Pods-WebmotorsTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebmotorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EE2FC9245EBADE571376E30 /* Pods-Webmotors-WebmotorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D7C80E91DA1F389ACCFAD53E /* Pods-Webmotors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors.release.xcconfig"; path = "Target Support Files/Pods-Webmotors/Pods-Webmotors.release.xcconfig"; sourceTree = "<group>"; };
 		EF932B252869E96200F2FAD3 /* Webmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B282869E96300F2FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		EF932B452869E96500F2FAD3 /* WebmotorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebmotorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B492869E96500F2FAD3 /* WebmotorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebmotorsUITests.swift; sourceTree = "<group>"; };
 		EF932B4B2869E96500F2FAD3 /* WebmotorsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebmotorsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebmotorsTests.debug.xcconfig"; path = "Target Support Files/Pods-WebmotorsTests/Pods-WebmotorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3162B0D17DEA0547DD4D9AB8 /* Pods_Webmotors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABFE81457D63198FA58E7C3 /* Pods_WebmotorsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490F85128E528D394EBF8D5A /* Pods_Webmotors_WebmotorsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101E335A3F8B404E5D5AE931 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B5B16CB004E0CA94275609B /* Pods_Webmotors.framework */,
+				066A0E5FD81CA1DA27C61039 /* Pods_Webmotors_WebmotorsUITests.framework */,
+				8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FB483A692C295DF54B28D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41F4CAD8AAB6AF69717AA562 /* Pods-Webmotors.debug.xcconfig */,
+				D7C80E91DA1F389ACCFAD53E /* Pods-Webmotors.release.xcconfig */,
+				F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */,
+				9EE2FC9245EBADE571376E30 /* Pods-Webmotors-WebmotorsUITests.release.xcconfig */,
+				F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */,
+				8983A1687B6CE4E4B5E0D9C6 /* Pods-WebmotorsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF932B1C2869E96200F2FAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				EF932B3E2869E96500F2FAD3 /* WebmotorsTests */,
 				EF932B482869E96500F2FAD3 /* WebmotorsUITests */,
 				EF932B262869E96200F2FAD3 /* Products */,
+				9FB483A692C295DF54B28D8E /* Pods */,
+				101E335A3F8B404E5D5AE931 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF932B4F2869E96500F2FAD3 /* Build configuration list for PBXNativeTarget "Webmotors" */;
 			buildPhases = (
+				BB48CA1E208198540E320EAC /* [CP] Check Pods Manifest.lock */,
 				EF932B212869E96200F2FAD3 /* Sources */,
 				EF932B222869E96200F2FAD3 /* Frameworks */,
 				EF932B232869E96200F2FAD3 /* Resources */,
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF932B522869E96500F2FAD3 /* Build configuration list for PBXNativeTarget "WebmotorsTests" */;
 			buildPhases = (
+				351CDD54FFAAE8EF3419B1EF /* [CP] Check Pods Manifest.lock */,
 				EF932B372869E96500F2FAD3 /* Sources */,
 				EF932B382869E96500F2FAD3 /* Frameworks */,
 				EF932B392869E96500F2FAD3 /* Resources */,
@@ -169,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF932B552869E96500F2FAD3 /* Build configuration list for PBXNativeTarget "WebmotorsUITests" */;
 			buildPhases = (
+				F523BAC95C16AB949FB99A26 /* [CP] Check Pods Manifest.lock */,
 				EF932B412869E96500F2FAD3 /* Sources */,
 				EF932B422869E96500F2FAD3 /* Frameworks */,
 				EF932B432869E96500F2FAD3 /* Resources */,
@@ -252,6 +296,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		351CDD54FFAAE8EF3419B1EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebmotorsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB48CA1E208198540E320EAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Webmotors-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F523BAC95C16AB949FB99A26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Webmotors-WebmotorsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF932B212869E96200F2FAD3 /* Sources */ = {
@@ -434,6 +547,7 @@
 		};
 		EF932B502869E96500F2FAD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F4CAD8AAB6AF69717AA562 /* Pods-Webmotors.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +576,7 @@
 		};
 		EF932B512869E96500F2FAD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C80E91DA1F389ACCFAD53E /* Pods-Webmotors.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +605,7 @@
 		};
 		EF932B532869E96500F2FAD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +631,7 @@
 		};
 		EF932B542869E96500F2FAD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983A1687B6CE4E4B5E0D9C6 /* Pods-WebmotorsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +657,7 @@
 		};
 		EF932B562869E96500F2FAD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +681,7 @@
 		};
 		EF932B572869E96500F2FAD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE2FC9245EBADE571376E30 /* Pods-Webmotors-WebmotorsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

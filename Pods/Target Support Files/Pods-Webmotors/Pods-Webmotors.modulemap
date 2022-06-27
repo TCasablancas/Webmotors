@@ -1,0 +1,6 @@
+framework module Pods_Webmotors {
+  umbrella header "Pods-Webmotors-umbrella.h"
+
+  export *
+  module * { export * }
+}
