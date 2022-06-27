@@ -23,7 +23,7 @@
 		EF932B602869EC4F00F2FAD3 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B5F2869EC4F00F2FAD3 /* ServerError.swift */; };
 		EF932B622869EC7B00F2FAD3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B612869EC7B00F2FAD3 /* Request.swift */; };
 		EF932B642869ECDB00F2FAD3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B632869ECDB00F2FAD3 /* Response.swift */; };
-		EF932B672869F93300F2FAD3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B662869F93300F2FAD3 /* CardView.swift */; };
+		EF932B672869F93300F2FAD3 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B662869F93300F2FAD3 /* CardViewCell.swift */; };
 		EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B692869F9FF00F2FAD3 /* BaseView.swift */; };
 		EF932B6C2869FA3400F2FAD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B6B2869FA3300F2FAD3 /* BaseViewController.swift */; };
 		EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B6D2869FB7F00F2FAD3 /* MainListViewController.swift */; };
@@ -31,6 +31,7 @@
 		EF932B72286A008500F2FAD3 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B71286A008500F2FAD3 /* MainListViewModel.swift */; };
 		EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B73286A012C00F2FAD3 /* Colors.swift */; };
 		EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */; };
+		EF932B79286A101200F2FAD3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B78286A101200F2FAD3 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		EF932B5F2869EC4F00F2FAD3 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		EF932B612869EC7B00F2FAD3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		EF932B632869ECDB00F2FAD3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		EF932B662869F93300F2FAD3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EF932B662869F93300F2FAD3 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		EF932B692869F9FF00F2FAD3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EF932B6B2869FA3300F2FAD3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF932B6D2869FB7F00F2FAD3 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		EF932B71286A008500F2FAD3 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
 		EF932B73286A012C00F2FAD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extenson.swift"; sourceTree = "<group>"; };
+		EF932B78286A101200F2FAD3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebmotorsTests.debug.xcconfig"; path = "Target Support Files/Pods-WebmotorsTests/Pods-WebmotorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				EF932B682869F9F400F2FAD3 /* Reusable */,
-				EF932B662869F93300F2FAD3 /* CardView.swift */,
+				EF932B662869F93300F2FAD3 /* CardViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */,
+				EF932B78286A101200F2FAD3 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 			files = (
 				EF932B602869EC4F00F2FAD3 /* ServerError.swift in Sources */,
 				EF932B702869FC4F00F2FAD3 /* MainListView.swift in Sources */,
+				EF932B79286A101200F2FAD3 /* UIView+Extension.swift in Sources */,
 				EF932B622869EC7B00F2FAD3 /* Request.swift in Sources */,
 				EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */,
 				EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */,
@@ -518,7 +522,7 @@
 				EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */,
 				EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */,
 				EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */,
-				EF932B672869F93300F2FAD3 /* CardView.swift in Sources */,
+				EF932B672869F93300F2FAD3 /* CardViewCell.swift in Sources */,
 				EF932B642869ECDB00F2FAD3 /* Response.swift in Sources */,
 				EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */,
 			);

@@ -1,8 +1,18 @@
 import UIKit
 
+
+
 final class MainListView: BaseView {
     
     // MARK: - UI
+    
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.separatorStyle = .none
+        table.showsVerticalScrollIndicator = false
+        table.separatorInset = .zero
+        return table
+    }()
     
     private let mainContainer: UIStackView = {
         let stack = UIStackView()
@@ -11,26 +21,24 @@ final class MainListView: BaseView {
         return stack
     }()
     
-    let cardView: CardView = {
-        let card = CardView()
-        card.translatesAutoresizingMaskIntoConstraints = false
-        return card
-    }()
-    
     // MARK: - Initialize
     
     override func initialize() {
         backgroundColor = .white
         clipsToBounds = false
         addSubview(mainContainer)
-        mainContainer.addArrangedSubview(cardView)
+        mainContainer.addArrangedSubview(tableView)
     }
     
     override func installConstraints() {
         NSLayoutConstraint.activate([
             mainContainer.widthAnchor.constraint(equalTo: widthAnchor),
             mainContainer.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            mainContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            mainContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            tableView.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 16),
+            tableView.rightAnchor.constraint(equalTo: mainContainer.rightAnchor, constant: -16),
+            tableView.heightAnchor.constraint(equalTo: mainContainer.heightAnchor)
         ])
     }
 }
