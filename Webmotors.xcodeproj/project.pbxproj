@@ -34,6 +34,10 @@
 		EF932B79286A101200F2FAD3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B78286A101200F2FAD3 /* UIView+Extension.swift */; };
 		EF932B7B286A183700F2FAD3 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B7A286A183700F2FAD3 /* Endpoints.swift */; };
 		EF932B7D286A195700F2FAD3 /* Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B7C286A195700F2FAD3 /* Make.swift */; };
+		EFC157B1286B7EE80008EF4E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC157B0286B7EE80008EF4E /* Model.swift */; };
+		EFC157B3286B80470008EF4E /* NetworParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC157B2286B80470008EF4E /* NetworParser.swift */; };
+		EFC157B5286B965A0008EF4E /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC157B4286B965A0008EF4E /* Version.swift */; };
+		EFC157B7286B971B0008EF4E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC157B6286B971B0008EF4E /* Vehicle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		EF932B78286A101200F2FAD3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF932B7A286A183700F2FAD3 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		EF932B7C286A195700F2FAD3 /* Make.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make.swift; sourceTree = "<group>"; };
+		EFC157B0286B7EE80008EF4E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EFC157B2286B80470008EF4E /* NetworParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworParser.swift; sourceTree = "<group>"; };
+		EFC157B4286B965A0008EF4E /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		EFC157B6286B971B0008EF4E /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		F19EB9246A7674150C6242C7 /* Pods-Webmotors-WebmotorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F45F0D99EA732A07C2A327C2 /* Pods-WebmotorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebmotorsTests.debug.xcconfig"; path = "Target Support Files/Pods-WebmotorsTests/Pods-WebmotorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,10 +177,7 @@
 		EF932B272869E96300F2FAD3 /* Webmotors */ = {
 			isa = PBXGroup;
 			children = (
-				EF932B312869E96400F2FAD3 /* Assets.xcassets */,
-				EF932B282869E96300F2FAD3 /* AppDelegate.swift */,
-				EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */,
-				EF932B2C2869E96300F2FAD3 /* ViewController.swift */,
+				EFC157B8286B9A260008EF4E /* Common */,
 				EF932B652869F91900F2FAD3 /* UI */,
 				EF932B75286A015F00F2FAD3 /* Extensions */,
 				EF932B582869EB0800F2FAD3 /* Models */,
@@ -206,6 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				EF932B7C286A195700F2FAD3 /* Make.swift */,
+				EFC157B0286B7EE80008EF4E /* Model.swift */,
+				EFC157B4286B965A0008EF4E /* Version.swift */,
+				EFC157B6286B971B0008EF4E /* Vehicle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 				EF932B5E2869EC3E00F2FAD3 /* Reusable */,
 				EF932B5C2869EBFF00F2FAD3 /* Worker.swift */,
 				EF932B7A286A183700F2FAD3 /* Endpoints.swift */,
+				EFC157B2286B80470008EF4E /* NetworParser.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -274,6 +283,17 @@
 				EF932B78286A101200F2FAD3 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFC157B8286B9A260008EF4E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EF932B312869E96400F2FAD3 /* Assets.xcassets */,
+				EF932B282869E96300F2FAD3 /* AppDelegate.swift */,
+				EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */,
+				EF932B2C2869E96300F2FAD3 /* ViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,7 +539,9 @@
 				EF932B702869FC4F00F2FAD3 /* MainListView.swift in Sources */,
 				EF932B7B286A183700F2FAD3 /* Endpoints.swift in Sources */,
 				EF932B79286A101200F2FAD3 /* UIView+Extension.swift in Sources */,
+				EFC157B5286B965A0008EF4E /* Version.swift in Sources */,
 				EF932B622869EC7B00F2FAD3 /* Request.swift in Sources */,
+				EFC157B3286B80470008EF4E /* NetworParser.swift in Sources */,
 				EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */,
 				EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */,
 				EF932B5D2869EBFF00F2FAD3 /* Worker.swift in Sources */,
@@ -531,7 +553,9 @@
 				EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */,
 				EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */,
 				EF932B672869F93300F2FAD3 /* CardViewCell.swift in Sources */,
+				EFC157B1286B7EE80008EF4E /* Model.swift in Sources */,
 				EF932B642869ECDB00F2FAD3 /* Response.swift in Sources */,
+				EFC157B7286B971B0008EF4E /* Vehicle.swift in Sources */,
 				EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
