@@ -15,7 +15,6 @@ final class CardViewCell: UITableViewCell {
     
     private let mainImage: UIImageView = {
         let view = UIImageView()
-//        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.layer.cornerRadius = 10
         view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +33,6 @@ final class CardViewCell: UITableViewCell {
     private let mainTitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 22)
-        label.text = "Honda CR-V"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -43,7 +41,6 @@ final class CardViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
-        label.text = "Lorem ipsum dolor sit amet..."
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -82,5 +79,11 @@ private extension CardViewCell {
             dataStackView.topAnchor.constraint(equalTo: mainImage.bottomAnchor),
             dataStackView.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor)
         ])
+    }
+    
+    public func setupCell(from model: Vehicle) {
+        mainTitleLabel.text = model.model
+        subtitleLabel.text = model.version
+        mainImage.image = UIImage(named: model.image)
     }
 }

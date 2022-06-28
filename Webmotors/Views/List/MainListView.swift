@@ -41,4 +41,13 @@ final class MainListView: BaseView {
             tableView.heightAnchor.constraint(equalTo: mainContainer.heightAnchor)
         ])
     }
+    
+    func setupTableView(to delegate: UITableViewDelegate,
+                        dataSource: UITableViewDataSource,
+                        identifier: String) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+        tableView.register(CardViewCell.self,
+                           forCellReuseIdentifier: identifier)
+    }
 }

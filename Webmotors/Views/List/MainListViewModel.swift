@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MainListViewModelDelegate: AnyObject {
-    
+    func setupVehicleData(model: Vehicle)
 }
 
 class MainListViewModel {
@@ -12,22 +12,25 @@ class MainListViewModel {
         self.worker = worker
     }
     
-    func setupMake() {
-        self.worker?.getMakeData { (response) in
+    func setupVehicleList() {
+        worker?.getVehiclesData(page: "1") { [weak self] (response) in
+            
+            guard let self = self else { return }
+            
             switch response {
             case .success(let model):
-                print("!!!.>>>> MODEL: ", model)
+                self.delegate?.setupVehicleData(model: model)
             case .serverError(let error):
                 let errorData = "\(error.statusCode), -, \(error.msgError)"
-//                output.didGetError(errorData)
+                //                output.didGetError(errorData)
                 print("Server error: \(errorData) \n")
                 break
             case .timeOut(let description):
                 print("Server error noConnection: \(description) \n")
-//                output.didGetError("Timeout")
+                //                output.didGetError("Timeout")
                 
             case .noConnection(let description):
-//                output.didGetError("Offline")
+                //                output.didGetError("Offline")
                 print("Server error timeOut: \(description) \n")
             }
         }

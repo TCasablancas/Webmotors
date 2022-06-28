@@ -5,6 +5,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     private let reuseIdentifier = "MainListView"
     
     var viewModel: MainListViewModel
+    var model: Vehicle?
     
     init(viewModel: MainListViewModel) {
         self.viewModel = viewModel
@@ -13,19 +14,25 @@ final class MainListViewController: BaseViewController<MainListView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
-        viewModel.setupMake()
+        baseView.setupTableView(to: self,
+                                dataSource: self,
+                                identifier: reuseIdentifier)
+        viewModel.setupVehicleList()
     }
 }
 
 extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = baseView.tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CardViewCell else {
             return UITableViewCell()
+        }
+        
+        if let returnedModel = model {
+            cell.setupCell(from: returnedModel)
         }
         
         return cell
@@ -36,10 +43,9 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-private extension MainListViewController {
-    func setupTableView() {
-        baseView.tableView.delegate = self
-        baseView.tableView.dataSource = self
-        baseView.tableView.register(CardViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+extension MainListViewController: MainListViewModelDelegate {
+    func setupVehicleData(model: Vehicle) {
+        self.model = model
+        baseView.tableView.reloadData()
     }
 }
