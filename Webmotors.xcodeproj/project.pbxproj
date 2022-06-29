@@ -10,6 +10,7 @@
 		3162B0D17DEA0547DD4D9AB8 /* Pods_Webmotors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5B16CB004E0CA94275609B /* Pods_Webmotors.framework */; };
 		490F85128E528D394EBF8D5A /* Pods_Webmotors_WebmotorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066A0E5FD81CA1DA27C61039 /* Pods_Webmotors_WebmotorsUITests.framework */; };
 		AABFE81457D63198FA58E7C3 /* Pods_WebmotorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */; };
+		EF88EFD5286C972B0035F6C3 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD4286C972B0035F6C3 /* MainList.swift */; };
 		EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B282869E96300F2FAD3 /* AppDelegate.swift */; };
 		EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */; };
 		EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2C2869E96300F2FAD3 /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebmotorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE2FC9245EBADE571376E30 /* Pods-Webmotors-WebmotorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7C80E91DA1F389ACCFAD53E /* Pods-Webmotors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors.release.xcconfig"; path = "Target Support Files/Pods-Webmotors/Pods-Webmotors.release.xcconfig"; sourceTree = "<group>"; };
+		EF88EFD4286C972B0035F6C3 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		EF932B252869E96200F2FAD3 /* Webmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B282869E96300F2FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				EFC157B0286B7EE80008EF4E /* Model.swift */,
 				EFC157B4286B965A0008EF4E /* Version.swift */,
 				EFC157B6286B971B0008EF4E /* Vehicle.swift */,
+				EF88EFD4286C972B0035F6C3 /* MainList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				EFC157B1286B7EE80008EF4E /* Model.swift in Sources */,
 				EF932B642869ECDB00F2FAD3 /* Response.swift in Sources */,
 				EFC157B7286B971B0008EF4E /* Vehicle.swift in Sources */,
+				EF88EFD5286C972B0035F6C3 /* MainList.swift in Sources */,
 				EF932B6E2869FB7F00F2FAD3 /* MainListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@ target 'Webmotors' do
   
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.5'
+  pod 'Kingfisher', '~> 7.0'
   
   # Pods for Webmotors
 

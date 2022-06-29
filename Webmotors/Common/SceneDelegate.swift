@@ -31,6 +31,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let worker = Worker()
         let rootViewModel = MainListViewModel(worker: worker)
         let rootViewController = MainListViewController(viewModel: rootViewModel)
+        
+        rootViewModel.delegate = rootViewController
+        
         let navVC = UINavigationController(rootViewController: rootViewController)
         
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)

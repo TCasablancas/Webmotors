@@ -9,7 +9,7 @@ protocol WorkerDelegate: AnyObject {
                       completion: @escaping (Response<Model>) -> Void)
     func getVersionData(modelId: String,
                         completion: @escaping (Response<Version>) -> Void)
-    func getVehiclesData(page: String,
+    func getVehiclesData(page: Int,
                          completion: @escaping (Response<Vehicle>) -> Void)
 }
 
@@ -41,7 +41,7 @@ final class Worker: Request, WorkerDelegate {
         network.setupParser(url: url, completion: completion)
     }
     
-    func getVehiclesData(page: String, completion: @escaping (Response<Vehicle>) -> Void) {
+    func getVehiclesData(page: Int, completion: @escaping (Response<Vehicle>) -> Void) {
         guard let url = URL(string: "\(Endpoints.getEndpoint)Vehicles?Page=\(page)") else {
             return
         }

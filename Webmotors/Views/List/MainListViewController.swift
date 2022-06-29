@@ -5,7 +5,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     private let reuseIdentifier = "MainListView"
     
     var viewModel: MainListViewModel
-    var model: Vehicle?
+    var model = [Vehicle]()
     
     init(viewModel: MainListViewModel) {
         self.viewModel = viewModel
@@ -19,11 +19,15 @@ final class MainListViewController: BaseViewController<MainListView> {
                                 identifier: reuseIdentifier)
         viewModel.setupVehicleList()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 }
 
 extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,9 +35,12 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let returnedModel = model {
-            cell.setupCell(from: returnedModel)
-        }
+        let item = model[indexPath.row]
+        cell.setupCell(from: item)
+        
+//        if let returnedModel = model {
+//            cell.setupCell(from: returnedModel)
+//        }
         
         return cell
     }
@@ -45,7 +52,7 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MainListViewController: MainListViewModelDelegate {
     func setupVehicleData(model: Vehicle) {
-        self.model = model
+        self.model.append(model)
         baseView.tableView.reloadData()
     }
 }
