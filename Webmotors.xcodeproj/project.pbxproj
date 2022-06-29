@@ -14,6 +14,11 @@
 		EF88EFD8286CBF6D0035F6C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD7286CBF6D0035F6C3 /* DetailView.swift */; };
 		EF88EFDA286CBFCB0035F6C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */; };
 		EF88EFDC286CC5050035F6C3 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */; };
+		EF88EFDE286CDD7B0035F6C3 /* ItemBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFDD286CDD7A0035F6C3 /* ItemBoxView.swift */; };
+		EF88EFE3286CE9FD0035F6C3 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF88EFE0286CE9FC0035F6C3 /* Nunito-Medium.ttf */; };
+		EF88EFE4286CE9FD0035F6C3 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF88EFE1286CE9FC0035F6C3 /* Nunito-ExtraBold.ttf */; };
+		EF88EFE5286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF88EFE2286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf */; };
+		EF88EFE7286CEF0D0035F6C3 /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFE6286CEF0D0035F6C3 /* NavigationBackButton.swift */; };
 		EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B282869E96300F2FAD3 /* AppDelegate.swift */; };
 		EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */; };
 		EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2C2869E96300F2FAD3 /* ViewController.swift */; };
@@ -73,6 +78,11 @@
 		EF88EFD7286CBF6D0035F6C3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		EF88EFDD286CDD7A0035F6C3 /* ItemBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBoxView.swift; sourceTree = "<group>"; };
+		EF88EFE0286CE9FC0035F6C3 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		EF88EFE1286CE9FC0035F6C3 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EF88EFE2286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EF88EFE6286CEF0D0035F6C3 /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
 		EF932B252869E96200F2FAD3 /* Webmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B282869E96300F2FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +177,16 @@
 				EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		EF88EFDF286CE9ED0035F6C3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF88EFE1286CE9FC0035F6C3 /* Nunito-ExtraBold.ttf */,
+				EF88EFE2286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf */,
+				EF88EFE0286CE9FC0035F6C3 /* Nunito-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EF932B1C2869E96200F2FAD3 = {
@@ -279,8 +299,11 @@
 		EF932B652869F91900F2FAD3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EF88EFDF286CE9ED0035F6C3 /* Fonts */,
 				EF932B682869F9F400F2FAD3 /* Reusable */,
 				EF932B662869F93300F2FAD3 /* CardViewCell.swift */,
+				EF88EFDD286CDD7A0035F6C3 /* ItemBoxView.swift */,
+				EF88EFE6286CEF0D0035F6C3 /* NavigationBackButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -425,7 +448,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF88EFE3286CE9FD0035F6C3 /* Nunito-Medium.ttf in Resources */,
 				EF932B352869E96400F2FAD3 /* LaunchScreen.storyboard in Resources */,
+				EF88EFE4286CE9FD0035F6C3 /* Nunito-ExtraBold.ttf in Resources */,
+				EF88EFE5286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf in Resources */,
 				EF932B322869E96400F2FAD3 /* Assets.xcassets in Resources */,
 				EF932B302869E96300F2FAD3 /* Main.storyboard in Resources */,
 			);
@@ -573,7 +599,9 @@
 				EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */,
 				EF932B6C2869FA3400F2FAD3 /* BaseViewController.swift in Sources */,
 				EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */,
+				EF88EFE7286CEF0D0035F6C3 /* NavigationBackButton.swift in Sources */,
 				EF932B6A2869F9FF00F2FAD3 /* BaseView.swift in Sources */,
+				EF88EFDE286CDD7B0035F6C3 /* ItemBoxView.swift in Sources */,
 				EF932B77286A017800F2FAD3 /* UIColor+Extenson.swift in Sources */,
 				EF932B672869F93300F2FAD3 /* CardViewCell.swift in Sources */,
 				EFC157B1286B7EE80008EF4E /* Model.swift in Sources */,

@@ -20,12 +20,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .red
         
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Nunito-ExtraBold", size: 22)!
+        ] as [ NSAttributedString.Key : Any ]
+        
+        navBarAppearance.titleTextAttributes = attrs
+        
         let appearance = UINavigationBar.appearance()
         appearance.backgroundColor = .red
         appearance.compactAppearance = navBarAppearance
         appearance.standardAppearance = navBarAppearance
         appearance.scrollEdgeAppearance = navBarAppearance
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let worker = Worker()
         let rootViewModel = MainListViewModel(worker: worker)

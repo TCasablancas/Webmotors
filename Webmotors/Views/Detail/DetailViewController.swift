@@ -11,6 +11,7 @@ final class DetailViewController: BaseViewController<DetailView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Detalhes"
         setupNavigationBar()
         setupView()
     }
@@ -18,7 +19,8 @@ final class DetailViewController: BaseViewController<DetailView> {
 
 private extension DetailViewController {
     func setupNavigationBar() {
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem?.setupBackButton(image: "left-arrow")
+        let item = UIBarButtonItem(customView: baseView.navigationBackButton)
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = item
     }
     
     func setupView() {
@@ -29,5 +31,15 @@ private extension DetailViewController {
             self?.navigationController?.popToRootViewController(animated: true)
             print("Dismiss Detail was tapped!")
         }
+        
+        baseView.navigationBackButton.didTapBack = { [weak self] in
+            self?.navigationController?.popToRootViewController(animated: true)
+            print("Navigation top back was tapped!")
+        }
+    }
+    
+    @objc
+    func backButton() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
