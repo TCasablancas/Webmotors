@@ -24,5 +24,10 @@ private extension DetailViewController {
     func setupView() {
         self.view.backgroundColor = Colors.mainCardBackground
         baseView.setupDetailsData(model: vehicleData)
+        
+        baseView.didTapBackButton = { [weak self] in
+            self?.navigationController?.popToRootViewController(animated: true)
+            print("Dismiss Detail was tapped!")
+        }
     }
 }

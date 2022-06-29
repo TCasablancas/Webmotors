@@ -7,7 +7,7 @@ protocol MainListViewModelDelegate: AnyObject {
 class MainListViewModel {
     weak var delegate: MainListViewModelDelegate?
     let worker: Worker?
-    
+    var currentPage = 1
     var model = [Vehicle]()
     
     init(worker: Worker) {
@@ -15,7 +15,7 @@ class MainListViewModel {
     }
     
     func setupVehicleList() {
-        worker?.getVehiclesData(page: 1) { [weak self] (response) in
+        worker?.getVehiclesData(page: currentPage) { [weak self] (response) in
             
             guard let self = self else { return }
             

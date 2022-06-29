@@ -16,9 +16,6 @@ final class MainListViewController: BaseViewController<MainListView> {
         super.viewDidLoad()
         title = "Webmotors"
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor.red
-        self.navigationController?.navigationBar.barTintColor = UIColor.red
-        
         baseView.setupTableView(to: self,
                                 dataSource: self,
                                 identifier: reuseIdentifier)

@@ -11,22 +11,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
         
-//        let appearance = UINavigationBar.appearance()
-//        let attrs = [
-//            NSAttributedString.Key.foregroundColor: Constants.default.iconColor
-//        ] as [ NSAttributedString.Key : Any ]
-//
-//        appearance.largeTitleTextAttributes = attrs
-//        appearance.prefersLargeTitles = true
-//        appearance.titleTextAttributes = attrs
-//        appearance.isTranslucent = true
-//        appearance.backgroundColor = Constants.default.bgGray
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = .red
+        
+        let appearance = UINavigationBar.appearance()
+        appearance.backgroundColor = .red
+        appearance.compactAppearance = navBarAppearance
+        appearance.standardAppearance = navBarAppearance
+        appearance.scrollEdgeAppearance = navBarAppearance
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let worker = Worker()
         let rootViewModel = MainListViewModel(worker: worker)
