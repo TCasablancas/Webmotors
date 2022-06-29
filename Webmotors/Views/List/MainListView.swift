@@ -1,7 +1,5 @@
 import UIKit
 
-
-
 final class MainListView: BaseView {
     
     // MARK: - UI
@@ -38,6 +36,7 @@ final class MainListView: BaseView {
             
             tableView.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 16),
             tableView.rightAnchor.constraint(equalTo: mainContainer.rightAnchor, constant: -16),
+            tableView.topAnchor.constraint(equalTo: mainContainer.topAnchor),
             tableView.heightAnchor.constraint(equalTo: mainContainer.heightAnchor)
         ])
     }

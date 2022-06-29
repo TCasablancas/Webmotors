@@ -26,15 +26,12 @@ class MainListViewModel {
                 self.model.append(model)
             case .serverError(let error):
                 let errorData = "\(error.statusCode), -, \(error.msgError)"
-                //                output.didGetError(errorData)
                 print("Server error: \(errorData) \n")
                 break
             case .timeOut(let description):
                 print("Server error noConnection: \(description) \n")
-                //                output.didGetError("Timeout")
                 
             case .noConnection(let description):
-                //                output.didGetError("Offline")
                 print("Server error timeOut: \(description) \n")
             }
         }

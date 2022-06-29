@@ -11,6 +11,9 @@
 		490F85128E528D394EBF8D5A /* Pods_Webmotors_WebmotorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066A0E5FD81CA1DA27C61039 /* Pods_Webmotors_WebmotorsUITests.framework */; };
 		AABFE81457D63198FA58E7C3 /* Pods_WebmotorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C906085F10BA556C567E93B /* Pods_WebmotorsTests.framework */; };
 		EF88EFD5286C972B0035F6C3 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD4286C972B0035F6C3 /* MainList.swift */; };
+		EF88EFD8286CBF6D0035F6C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD7286CBF6D0035F6C3 /* DetailView.swift */; };
+		EF88EFDA286CBFCB0035F6C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */; };
+		EF88EFDC286CC5050035F6C3 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */; };
 		EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B282869E96300F2FAD3 /* AppDelegate.swift */; };
 		EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */; };
 		EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2C2869E96300F2FAD3 /* ViewController.swift */; };
@@ -67,6 +70,9 @@
 		9EE2FC9245EBADE571376E30 /* Pods-Webmotors-WebmotorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors-WebmotorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Webmotors-WebmotorsUITests/Pods-Webmotors-WebmotorsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7C80E91DA1F389ACCFAD53E /* Pods-Webmotors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webmotors.release.xcconfig"; path = "Target Support Files/Pods-Webmotors/Pods-Webmotors.release.xcconfig"; sourceTree = "<group>"; };
 		EF88EFD4286C972B0035F6C3 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		EF88EFD7286CBF6D0035F6C3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		EF932B252869E96200F2FAD3 /* Webmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B282869E96300F2FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +160,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF88EFD6286CBF5F0035F6C3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EF88EFD7286CBF6D0035F6C3 /* DetailView.swift */,
+				EF88EFD9286CBFCB0035F6C3 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		EF932B1C2869E96200F2FAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				EF932B5B2869EB5000F2FAD3 /* List */,
+				EF88EFD6286CBF5F0035F6C3 /* Detail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +300,7 @@
 			children = (
 				EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */,
 				EF932B78286A101200F2FAD3 /* UIView+Extension.swift */,
+				EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,6 +556,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF932B602869EC4F00F2FAD3 /* ServerError.swift in Sources */,
+				EF88EFD8286CBF6D0035F6C3 /* DetailView.swift in Sources */,
+				EF88EFDA286CBFCB0035F6C3 /* DetailViewController.swift in Sources */,
 				EF932B702869FC4F00F2FAD3 /* MainListView.swift in Sources */,
 				EF932B7B286A183700F2FAD3 /* Endpoints.swift in Sources */,
 				EF932B79286A101200F2FAD3 /* UIView+Extension.swift in Sources */,
@@ -548,6 +567,7 @@
 				EF932B74286A012C00F2FAD3 /* Colors.swift in Sources */,
 				EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */,
 				EF932B5D2869EBFF00F2FAD3 /* Worker.swift in Sources */,
+				EF88EFDC286CC5050035F6C3 /* UIBarButtonItem+Extension.swift in Sources */,
 				EF932B72286A008500F2FAD3 /* MainListViewModel.swift in Sources */,
 				EF932B7D286A195700F2FAD3 /* Make.swift in Sources */,
 				EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */,

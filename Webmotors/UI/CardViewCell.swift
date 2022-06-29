@@ -69,9 +69,12 @@ final class CardViewCell: UITableViewCell {
     }
     
     func setupCell(from model: Vehicle) {
-        if let url = URL(string: model.image) {
-            mainImage.kf.indicatorType = .activity
-            mainImage.kf.setImage(with: url)
+        guard let url = URL(string: model.image) else { return }
+        
+        if let data = try? Data(contentsOf: url) {
+            if let image = UIImage(data: data) {
+                mainImage.image = image
+            }
         } else {
             mainImage.image = UIImage(named: "not-found.png")
         }
@@ -102,7 +105,9 @@ private extension CardViewCell {
             dataStackView.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 15),
             dataStackView.rightAnchor.constraint(equalTo: mainContainer.rightAnchor, constant: -15),
             dataStackView.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 15),
-            dataStackView.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor, constant: -30)
+            dataStackView.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor, constant: -30),
+            
+            priceLabel.bottomAnchor.constraint(equalTo: dataStackView.bottomAnchor, constant: -15)
         ])
     }
 }
