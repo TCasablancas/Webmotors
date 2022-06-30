@@ -28,7 +28,7 @@ private extension DetailViewController {
         baseView.setupDetailsData(model: vehicleData)
         
         baseView.didTapBackButton = { [weak self] in
-            self?.navigationController?.popToRootViewController(animated: true)
+            self?.dismiss(animated: true)
             print("Dismiss Detail was tapped!")
         }
         

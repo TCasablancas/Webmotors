@@ -9,6 +9,7 @@ class MainListViewModel {
     let worker: Worker?
     var isPaginating = false
     var model = [Vehicle]()
+    var carImage = UIImage()
     
     init(worker: Worker) {
         self.worker = worker
@@ -23,7 +24,6 @@ class MainListViewModel {
             case .success(let model):
                 self.delegate?.setupVehicleData(model: model)
                 self.model.append(model)
-                
             case .serverError(let error):
                 let errorData = "\(error.statusCode), -, \(error.msgError)"
                 print("Server error: \(errorData) \n")

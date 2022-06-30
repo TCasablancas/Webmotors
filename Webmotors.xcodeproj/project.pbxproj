@@ -20,6 +20,7 @@
 		EF88EFE5286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF88EFE2286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf */; };
 		EF88EFE7286CEF0D0035F6C3 /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFE6286CEF0D0035F6C3 /* NavigationBackButton.swift */; };
 		EF88EFEB286D470C0035F6C3 /* PaginatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFEA286D470C0035F6C3 /* PaginatorView.swift */; };
+		EF88EFED286D55A80035F6C3 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88EFEC286D55A80035F6C3 /* UIImageView+Extension.swift */; };
 		EF932B292869E96300F2FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B282869E96300F2FAD3 /* AppDelegate.swift */; };
 		EF932B2B2869E96300F2FAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */; };
 		EF932B2D2869E96300F2FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF932B2C2869E96300F2FAD3 /* ViewController.swift */; };
@@ -85,6 +86,7 @@
 		EF88EFE2286CE9FD0035F6C3 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		EF88EFE6286CEF0D0035F6C3 /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
 		EF88EFEA286D470C0035F6C3 /* PaginatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorView.swift; sourceTree = "<group>"; };
+		EF88EFEC286D55A80035F6C3 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		EF932B252869E96200F2FAD3 /* Webmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF932B282869E96300F2FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF932B2A2869E96300F2FAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				EF932B76286A017800F2FAD3 /* UIColor+Extenson.swift */,
 				EF932B78286A101200F2FAD3 /* UIView+Extension.swift */,
 				EF88EFDB286CC5050035F6C3 /* UIBarButtonItem+Extension.swift */,
+				EF88EFEC286D55A80035F6C3 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF88EFED286D55A80035F6C3 /* UIImageView+Extension.swift in Sources */,
 				EF932B602869EC4F00F2FAD3 /* ServerError.swift in Sources */,
 				EF88EFD8286CBF6D0035F6C3 /* DetailView.swift in Sources */,
 				EF88EFDA286CBFCB0035F6C3 /* DetailViewController.swift in Sources */,

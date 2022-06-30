@@ -100,7 +100,9 @@ final class DetailView: BaseView {
     
     private let backButton: UIButton = {
         let button = UIButton()
-        button.setTitle("VOLTAR", for: .normal)
+        button.setTitle("  VOLTAR", for: .normal)
+        button.setImage(UIImage(systemName: "arrow.backward")?.withTintColor(.white, renderingMode: .alwaysOriginal),
+                        for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "Nunito-ExtraBold", size: 20)
         button.layer.cornerRadius = 20
@@ -145,7 +147,7 @@ final class DetailView: BaseView {
             itemsStack.heightAnchor.constraint(equalToConstant: 150),
             
             backButton.widthAnchor.constraint(equalTo: paddingContainer.widthAnchor),
-            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.heightAnchor.constraint(equalToConstant: 60),
             backButton.bottomAnchor.constraint(equalTo: paddingContainer.bottomAnchor, constant: -15)
         ])
     }

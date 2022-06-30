@@ -32,7 +32,6 @@ final class CardViewCell: UITableViewCell {
         let view = UIImageView()
         view.sizeToFit()
         view.contentMode = .scaleToFill
-        view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -84,7 +83,7 @@ final class CardViewCell: UITableViewCell {
     }
     
     func setupCell(from model: Vehicle) {
-        guard let url = URL(string: model.image) else { return }
+        let url = URL(string: model.image)!
         
         if let data = try? Data(contentsOf: url) {
             if let image = UIImage(data: data) {
