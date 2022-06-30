@@ -12,10 +12,16 @@ final class ItemBoxView: BaseView {
     }()
     
     private lazy var mainStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [iconView, mainLabel, titleLabel])
+        let stack = UIStackView(arrangedSubviews: [iconContainer, mainLabel, titleLabel])
         stack.axis = .vertical
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
+    }()
+    
+    private let iconContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private let iconView: UIImageView = {
@@ -45,6 +51,7 @@ final class ItemBoxView: BaseView {
         clipsToBounds = false
         addSubview(mainContainer)
         mainContainer.addSubview(mainStack)
+        iconContainer.addSubview(iconView)
     }
     
     override func installConstraints() {
@@ -57,8 +64,10 @@ final class ItemBoxView: BaseView {
             mainStack.centerXAnchor.constraint(equalTo: mainContainer.centerXAnchor),
             mainStack.centerYAnchor.constraint(equalTo: mainContainer.centerYAnchor),
             
-            iconView.widthAnchor.constraint(equalToConstant: 40),
-            iconView.heightAnchor.constraint(equalToConstant: 30),
+            iconContainer.heightAnchor.constraint(equalToConstant: 20),
+            
+            iconView.widthAnchor.constraint(equalToConstant: 22),
+            iconView.heightAnchor.constraint(equalTo: iconContainer.heightAnchor),
             
             mainLabel.widthAnchor.constraint(equalTo: widthAnchor),
         ])

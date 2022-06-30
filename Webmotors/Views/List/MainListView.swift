@@ -33,12 +33,20 @@ final class MainListView: BaseView {
         return view
     }()
     
+    private let paginatorView: PaginatorView = {
+        let paginator = PaginatorView()
+        paginator.translatesAutoresizingMaskIntoConstraints = false
+        return paginator
+    }()
+    
     // MARK: - Initialize
     
     override func initialize() {
         backgroundColor = Colors.mainBackground
         clipsToBounds = false
+        addSubview(paginatorView)
         addSubview(mainContainer)
+        bringSubviewToFront(paginatorView)
         spinnerContainer.addSubview(spinnerView)
         mainContainer.addArrangedSubview(tableView)
         mainContainer.addArrangedSubview(spinnerContainer)

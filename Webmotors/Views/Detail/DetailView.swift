@@ -174,8 +174,8 @@ final class DetailView: BaseView {
         priceLabel.text = "R$ \(price)"
         descriptionLabel.text = model.version
         
-        itemOne.setupBox(icon: "", label: "Kms", title: "\(model.km) km")
-        itemTwo.setupBox(icon: "",  label: "Fab/Mod", title: "\(model.yearFab)-\(model.yearModel)")
-        itemThree.setupBox(icon: "", label: "Cor", title: model.color)
+        itemOne.setupBox(icon: "speedometer", label: "Kms", title: "\(model.km) km")
+        itemTwo.setupBox(icon: "calendar",  label: "Fab/Mod", title: "\(model.yearFab)-\(model.yearModel)")
+        itemThree.setupBox(icon: "ink-fill", label: "Cor", title: model.color)
     }
 }

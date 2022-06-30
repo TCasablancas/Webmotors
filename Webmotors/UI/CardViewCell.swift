@@ -22,6 +22,8 @@ final class CardViewCell: UITableViewCell {
     
     private let imageContainer: UIView = {
         let view = UIView()
+        view.backgroundColor = .lightGray
+        view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -29,7 +31,7 @@ final class CardViewCell: UITableViewCell {
     private let mainImage: UIImageView = {
         let view = UIImageView()
         view.sizeToFit()
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleToFill
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -48,14 +50,14 @@ final class CardViewCell: UITableViewCell {
     
     private let mainTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.font = UIFont(name: "Nunito-ExtraBold", size: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: "Nunito-Medium", size: 14)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -63,7 +65,7 @@ final class CardViewCell: UITableViewCell {
     
     private let priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont(name: "Nunito-ExtraBold", size: 20)
         label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -108,9 +110,6 @@ private extension CardViewCell {
         clipsToBounds = false
         addSubview(mainContainer)
         imageContainer.addSubview(mainImage)
-        
-        imageContainer.mask = mainImage
-        mainImage.center = imageContainer.center
     }
     
     func installConstraints() {
@@ -120,8 +119,9 @@ private extension CardViewCell {
             mainContainer.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             mainContainer.heightAnchor.constraint(equalToConstant: 290),
             
-            imageContainer.widthAnchor.constraint(equalTo: mainContainer.widthAnchor),
-            imageContainer.topAnchor.constraint(equalTo: mainContainer.topAnchor),
+            imageContainer.widthAnchor.constraint(equalTo: mainContainer.widthAnchor, constant: -12),
+            imageContainer.topAnchor.constraint(equalTo: mainContainer.topAnchor, constant: 6),
+            imageContainer.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 6),
             imageContainer.heightAnchor.constraint(equalToConstant: 180),
             
             mainImage.widthAnchor.constraint(equalTo: imageContainer.widthAnchor),
@@ -132,7 +132,7 @@ private extension CardViewCell {
             dataStackView.topAnchor.constraint(equalTo: mainImage.bottomAnchor),
             dataStackView.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor, constant: -30),
             
-            mainTitleLabel.topAnchor.constraint(equalTo: dataStackView.topAnchor, constant: 15),
+            mainTitleLabel.topAnchor.constraint(equalTo: dataStackView.topAnchor, constant: 8),
             mainTitleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             priceLabel.bottomAnchor.constraint(equalTo: dataStackView.bottomAnchor, constant: -15)

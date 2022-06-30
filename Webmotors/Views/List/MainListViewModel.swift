@@ -8,14 +8,13 @@ class MainListViewModel {
     weak var delegate: MainListViewModelDelegate?
     let worker: Worker?
     var isPaginating = false
-    var currentPage = 1
     var model = [Vehicle]()
     
     init(worker: Worker) {
         self.worker = worker
     }
     
-    func setupVehicleList() {
+    func setupVehicleList(currentPage: Int) {
         worker?.getVehiclesData(page: currentPage) { [weak self] (response) in
             
             guard let self = self else { return }

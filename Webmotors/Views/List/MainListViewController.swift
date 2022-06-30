@@ -6,6 +6,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     
     var viewModel: MainListViewModel
     var model = [Vehicle]()
+    var currentPage = 1
     
     init(viewModel: MainListViewModel) {
         self.viewModel = viewModel
@@ -23,7 +24,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.setupVehicleList()
+        viewModel.setupVehicleList(currentPage: currentPage)
     }
     
     override func viewDidLayoutSubviews() {
@@ -63,10 +64,10 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource, UI
         let position = scrollView.contentOffset.y
         if position > (baseView.tableView.contentSize.height - 100 - scrollView.frame.size.height) {
             baseView.tableView.tableFooterView = createSpinner()
-            viewModel.setupVehicleList()
-            baseView.tableView.reloadData()
             DispatchQueue.main.async {
                 self.baseView.tableView.tableFooterView = nil
+                self.viewModel.setupVehicleList(currentPage: self.currentPage + 1)
+                self.baseView.tableView.reloadData()
             }
         }
     }
