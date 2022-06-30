@@ -8,7 +8,9 @@ final class MainListView: BaseView {
         let table = UITableView()
         table.separatorStyle = .none
         table.showsVerticalScrollIndicator = false
-        table.separatorInset = .zero
+        table.backgroundColor = Colors.mainBackground
+        table.sectionIndexBackgroundColor = .clear
+        table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
     
@@ -19,13 +21,27 @@ final class MainListView: BaseView {
         return stack
     }()
     
+    let spinnerView: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView()
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
+    
+    let spinnerContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: - Initialize
     
     override func initialize() {
-        backgroundColor = .white
+        backgroundColor = Colors.mainBackground
         clipsToBounds = false
         addSubview(mainContainer)
+        spinnerContainer.addSubview(spinnerView)
         mainContainer.addArrangedSubview(tableView)
+        mainContainer.addArrangedSubview(spinnerContainer)
     }
     
     override func installConstraints() {
@@ -37,7 +53,14 @@ final class MainListView: BaseView {
             tableView.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 16),
             tableView.rightAnchor.constraint(equalTo: mainContainer.rightAnchor, constant: -16),
             tableView.topAnchor.constraint(equalTo: mainContainer.topAnchor),
-            tableView.heightAnchor.constraint(equalTo: mainContainer.heightAnchor)
+            tableView.heightAnchor.constraint(equalTo: mainContainer.heightAnchor),
+            
+            spinnerContainer.widthAnchor.constraint(equalTo: mainContainer.widthAnchor),
+            spinnerContainer.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor),
+            spinnerContainer.heightAnchor.constraint(equalToConstant: 100),
+            
+            spinnerView.widthAnchor.constraint(equalTo: spinnerContainer.widthAnchor),
+            spinnerView.heightAnchor.constraint(equalTo: spinnerContainer.heightAnchor)
         ])
     }
     

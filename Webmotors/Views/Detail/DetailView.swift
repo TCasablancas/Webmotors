@@ -168,7 +168,10 @@ final class DetailView: BaseView {
             mainImageView.image = UIImage(named: "not-found.png")
         }
         
-        priceLabel.text = "R$ \(model.price)"
+        var price = model.price
+        price.insert(".", at: price.index(price.startIndex, offsetBy: 2))
+        
+        priceLabel.text = "R$ \(price)"
         descriptionLabel.text = model.version
         
         itemOne.setupBox(icon: "", label: "Kms", title: "\(model.km) km")

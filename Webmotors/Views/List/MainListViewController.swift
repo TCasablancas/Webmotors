@@ -15,7 +15,7 @@ final class MainListViewController: BaseViewController<MainListView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Webmotors"
-        
+        view.backgroundColor = Colors.mainBackground
         baseView.setupTableView(to: self,
                                 dataSource: self,
                                 identifier: reuseIdentifier)
@@ -25,9 +25,15 @@ final class MainListViewController: BaseViewController<MainListView> {
         super.viewDidAppear(animated)
         viewModel.setupVehicleList()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
 }
 
-extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
+// MARK: - UITableViewDelegate, UITableViewDataSource and UIScrollViewDelegate
+
+extension MainListViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
@@ -40,6 +46,8 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
         let item = model[indexPath.row]
         cell.setupCell(from: item)
         
+        cell.selectedBackgroundView = cell.selectionBackgroundView
+        
         return cell
     }
     
@@ -50,16 +58,35 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigateToDetails(model: model[indexPath.row])
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (baseView.tableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            baseView.tableView.tableFooterView = createSpinner()
+            viewModel.setupVehicleList()
+            baseView.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.baseView.tableView.tableFooterView = nil
+            }
+        }
+    }
 }
 
+// MARK: - ViewModelDelegate and Navigation
+
 extension MainListViewController: MainListViewModelDelegate {
-    func navigateToDetails(model: Vehicle) {
+    private func navigateToDetails(model: Vehicle) {
         let viewController = DetailViewController(vehicleData: model)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.present(viewController, animated: true)
     }
     
     func setupVehicleData(model: Vehicle) {
         self.model.append(model)
         baseView.tableView.reloadData()
+    }
+    
+    private func createSpinner() -> UIView {
+        baseView.spinnerView.startAnimating()
+        return baseView.spinnerContainer
     }
 }

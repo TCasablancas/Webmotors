@@ -20,7 +20,7 @@ final class DetailViewController: BaseViewController<DetailView> {
 private extension DetailViewController {
     func setupNavigationBar() {
         let item = UIBarButtonItem(customView: baseView.navigationBackButton)
-        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = item
+        navigationItem.leftBarButtonItem = item
     }
     
     func setupView() {

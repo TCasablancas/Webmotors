@@ -7,6 +7,7 @@ protocol MainListViewModelDelegate: AnyObject {
 class MainListViewModel {
     weak var delegate: MainListViewModelDelegate?
     let worker: Worker?
+    var isPaginating = false
     var currentPage = 1
     var model = [Vehicle]()
     
@@ -22,8 +23,8 @@ class MainListViewModel {
             switch response {
             case .success(let model):
                 self.delegate?.setupVehicleData(model: model)
-                
                 self.model.append(model)
+                
             case .serverError(let error):
                 let errorData = "\(error.statusCode), -, \(error.msgError)"
                 print("Server error: \(errorData) \n")
@@ -35,5 +36,9 @@ class MainListViewModel {
                 print("Server error timeOut: \(description) \n")
             }
         }
+    }
+    
+    func isPaginating(_ pagination: Bool) {
+        self.isPaginating = pagination ? true : false
     }
 }

@@ -6,10 +6,22 @@ final class CardViewCell: UITableViewCell {
     // MARK: - UI
     
     private lazy var mainContainer: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [mainImage, dataStackView])
+        let view = UIStackView(arrangedSubviews: [imageContainer, dataStackView])
         view.axis = .vertical
-        view.backgroundColor = Colors.mainCardBackground
+        view.backgroundColor = .white
         view.layer.cornerRadius = 10
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let selectionBackgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
+    
+    private let imageContainer: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -28,7 +40,8 @@ final class CardViewCell: UITableViewCell {
         stack.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         stack.layer.cornerRadius = 10
         stack.axis = .vertical
-        stack.spacing = 10
+        stack.spacing = 4
+        stack.backgroundColor = .clear
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
@@ -51,7 +64,7 @@ final class CardViewCell: UITableViewCell {
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = .lightGray
+        label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -81,31 +94,46 @@ final class CardViewCell: UITableViewCell {
 
         mainTitleLabel.text = "\(model.make) \(model.model)"
         subtitleLabel.text = model.version
-        priceLabel.text = "R$ \(model.price)"
+        
+        var price = model.price
+        price.insert(".", at: price.index(price.startIndex, offsetBy: 2))
+        
+        priceLabel.text = "R$ \(price)"
     }
 }
 
 private extension CardViewCell {
     func setupView() {
-        backgroundColor = .white
+        backgroundColor = .clear
         clipsToBounds = false
         addSubview(mainContainer)
+        imageContainer.addSubview(mainImage)
+        
+        imageContainer.mask = mainImage
+        mainImage.center = imageContainer.center
     }
     
     func installConstraints() {
         NSLayoutConstraint.activate([
+            mainContainer.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             mainContainer.leftAnchor.constraint(equalTo: leftAnchor),
             mainContainer.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             mainContainer.heightAnchor.constraint(equalToConstant: 290),
             
-            mainImage.widthAnchor.constraint(equalTo: mainContainer.widthAnchor),
-            mainImage.topAnchor.constraint(equalTo: mainContainer.topAnchor),
-            mainImage.heightAnchor.constraint(equalToConstant: 180),
+            imageContainer.widthAnchor.constraint(equalTo: mainContainer.widthAnchor),
+            imageContainer.topAnchor.constraint(equalTo: mainContainer.topAnchor),
+            imageContainer.heightAnchor.constraint(equalToConstant: 180),
+            
+            mainImage.widthAnchor.constraint(equalTo: imageContainer.widthAnchor),
+            mainImage.heightAnchor.constraint(equalTo: imageContainer.heightAnchor),
             
             dataStackView.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 15),
             dataStackView.rightAnchor.constraint(equalTo: mainContainer.rightAnchor, constant: -15),
-            dataStackView.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 15),
+            dataStackView.topAnchor.constraint(equalTo: mainImage.bottomAnchor),
             dataStackView.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor, constant: -30),
+            
+            mainTitleLabel.topAnchor.constraint(equalTo: dataStackView.topAnchor, constant: 15),
+            mainTitleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             priceLabel.bottomAnchor.constraint(equalTo: dataStackView.bottomAnchor, constant: -15)
         ])
